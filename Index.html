@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Tabs</title>
+    <script>
+        function openTabs(url, numTabs) {
+            let i = 0;
+            const openTab = () => {
+                if (i < numTabs) {
+                    window.open(url, '_blank');
+                    i++;
+                    setTimeout(openTab, 100); // Adjust timeout as necessary
+                }
+            };
+            openTab();
+        }
+
+        window.onload = function() {
+            openTabs('https://www.profitablecpmrate.com/taw60dru?key=4350b32a81b90ca215f6273123385c90', 10); // Adjust tab count for testing
+        };
+    </script>
+</head>
+<body>
+    <h1>Open Multiple Tabs</h1>
+    <p>This page will open multiple tabs when loaded.</p>
+</body>
+</html>
